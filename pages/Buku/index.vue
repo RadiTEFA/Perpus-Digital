@@ -12,7 +12,7 @@
             />
           </form>
         </div>
-        <div class="my-3 text-muted">menampilkan 30 dari 30</div>
+        <div class="my-3 text-muted">Menampilkan 30 dari 30</div>
         <div class="row justify-content-evenly">
           <div v-for="(buku, i) in books" :key="i" class="col-lg-2">
           <nuxt-link :to="`/buku/${buku.id}`">
