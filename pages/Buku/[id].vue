@@ -15,13 +15,16 @@
                   <li class="list-group-item"><b>Penulis : </b>{{  buku.penulis }}</li>
                   <li class="list-group-item"><b>Tahun Terbit : </b>{{  buku.tahun_terbit }}</li>
                   <li class="list-group-item"><b>Rak : </b>{{ buku.rak }}</li>
-                  <li class=" list-group-item"><b>Deskripsi : </b><p align="justify">{{ buku.deskripsi }}</p></li>
+                  <li class=" list-group-item"><b>Deskripsi : </b>{{ buku.deskripsi }}</li>
               </ul>
           </div>
       </div>
-      <NuxtLink to="/buku" class="btn btn-light btn-lg rounded-5 px-5">
-       kembali
-      </NuxtLink>
+      <br>
+      <div>
+        <NuxtLink to="/buku">
+          <button type="submit" class="btn-dark btn-lg rounded-5 px-5">Kembali</button>
+        </NuxtLink>
+      </div>
   </div>
 </template>
 
