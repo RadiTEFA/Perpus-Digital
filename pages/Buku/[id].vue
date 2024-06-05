@@ -24,7 +24,7 @@
       <br>
       <div>
         <NuxtLink to="/buku">
-          <button type="submit" class="btn-dark btn-lg rounded-5 px-5">Kembali</button>
+          <button type="submit" class="btn btn-dark btn-lg rounded-5 px-5">Kembali</button>
         </NuxtLink>
       </div>
   </div>
@@ -51,6 +51,11 @@ onMounted(() => {
 })
 </script>
 <style scoped>
+.btn{
+  background-color: rgb(68, 80, 252);
+  color: black;
+  font-family: 'Times New Roman';
+}
 .cover{
   width: 100%;
 }
