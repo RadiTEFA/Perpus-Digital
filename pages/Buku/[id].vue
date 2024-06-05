@@ -13,6 +13,8 @@
           <div class="col-md-6">
               <ul class="list-group list-group-flush tulisan">
                   <li class="list-group-item"><b>Penulis : </b>{{  buku.penulis }}</li>
+                  <li class="list-group-item"><b>Penerbit : </b>{{  buku.penerbit }}</li>
+                  <li class="list-group-item"><b>Kategori : </b>{{  buku.kategori }}</li>
                   <li class="list-group-item"><b>Tahun Terbit : </b>{{  buku.tahun_terbit }}</li>
                   <li class="list-group-item"><b>Rak : </b>{{ buku.rak }}</li>
                   <li class=" list-group-item tengah"><b>Deskripsi : </b>{{ buku.deskripsi }}</li>
