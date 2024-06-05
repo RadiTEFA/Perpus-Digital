@@ -68,6 +68,11 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.btn{
+  background-color: #D9D9D9;
+  color: black;
+  font-family: 'Times New Roman';
+}
 .tulisan{
   font-family: 'Times New Roman', Times, serif;
 }
