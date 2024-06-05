@@ -15,7 +15,7 @@
                   <li class="list-group-item"><b>Penulis : </b>{{  buku.penulis }}</li>
                   <li class="list-group-item"><b>Tahun Terbit : </b>{{  buku.tahun_terbit }}</li>
                   <li class="list-group-item"><b>Rak : </b>{{ buku.rak }}</li>
-                  <li class=" list-group-item"><b>Deskripsi : </b>{{ buku.deskripsi }}</li>
+                  <li class=" list-group-item tengah"><b>Deskripsi : </b>{{ buku.deskripsi }}</li>
               </ul>
           </div>
       </div>
@@ -57,5 +57,8 @@ onMounted(() => {
 }
 .tulisan{
   font-family: 'Times New Roman', Times, serif;
+}
+.tengah{
+  text-align: justify;
 }
 </style>
