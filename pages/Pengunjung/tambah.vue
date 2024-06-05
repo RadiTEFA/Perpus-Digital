@@ -50,9 +50,10 @@
                           <option v-for="(item, i) in objectives" :key="i" :value="item.id">{{ item.nama }}</option>
                       </select>
                   </div>
-                     
-                          <button type="submit" class="btn btn-dark btn-lg rounded-5 px-5">Kirim</button>
-                     
+                    <button type="submit" class="btn btn-dark btn-lg rounded-5 px-5">Kirim</button>
+                    <NuxtLink to="/" class="y">
+                          <button type="submit" class="btn btn-dark btn-lg rounded-5 px-5 tulisan">Kembali</button>
+                    </NuxtLink>
               </form>
           </div>
       </div>
@@ -130,5 +131,12 @@ onMounted(() => {
 }
 .judul{
   font-family: 'Times New Roman', Times, serif;
+}
+.tulisan{
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #D9D9D9;
+}
+.y{
+  padding-left: 10px;
 }
 </style>
