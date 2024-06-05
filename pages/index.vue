@@ -29,20 +29,24 @@
     </div>
       <div class="row my-5 d-flex justify-content-evenly ">
         <div class="col-lg-6 box">
-          <div class="card b2 rounded-5">
-            <div class="card-body text">
-              <h1 class="no">5</h1>
-              <p class="yes">Pengunjung</p>
+          <NuxtLink to="http://localhost:3000/pengunjung">
+            <div class="card b2 rounded-5">
+              <div class="card-body text">
+                <h1><span class="no">{{ jml_pengunjung}}</span></h1>
+                <p class="yes">Pengunjung</p>
+              </div>
             </div>
-          </div>
+          </NuxtLink>
         </div>
         <div class="col-lg-6 box">
-          <div class="card b3 rounded-5">
-            <div class="card-body text">
-              <h1 class="no">30</h1>
-              <p class="yes">Buku</p>
+          <NuxtLink to="http://localhost:3000/buku">
+            <div class="card b3 rounded-5">
+              <div class="card-body text">
+                <h1 class="no">{{ jml_buku}}</h1>
+                <p class="yes">Buku</p>
             </div>
           </div>
+          </NuxtLink>
         </div>
       </div>
       <div class="container">
@@ -53,8 +57,31 @@
     </div>
   </template>
 
+
 <script setup>
 useHead({ title: "Home/Perpustakaan Digital" })
+const supabase = useSupabaseClient()
+const jml_pengunjung = ref(0)
+const jml_buku = ref(0)
+
+
+async function getjml_pengunjung() {
+  const{ error , data, count } = await supabase
+  .from("pengunjung")
+  .select('*', { count: 'exact' })
+  if (count) jml_pengunjung.value = count
+}
+async function getjml_buku() {
+  const{ error , data, count } = await supabase
+  .from("buku")
+  .select('*', { count: 'exact' })
+  if (count) jml_buku.value = count
+}
+
+onMounted(() => {
+  getjml_pengunjung()
+  getjml_buku()
+})
 </script>
 
 <style scoped>
@@ -96,14 +123,17 @@ useHead({ title: "Home/Perpustakaan Digital" })
 }
 .no{
   font-size: 70px;
+  color:black;
 }
 .yes{
   font-family: 'Times New Roman', Times, serif;
   font-size: 25px;
   padding-top: 40px;
+  color:black;
 }
 .Radi{
   color: rgb(255, 255, 255);
   font-family: 'Times New Roman', Times, serif;
+  text-shadow: 2px 2px 0px rgb(0, 0, 0);
 }
 </style>
