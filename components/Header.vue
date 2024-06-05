@@ -6,7 +6,7 @@
     <div class="t-judul">
       <h1>Perpustakaan Digital</h1>
       <h6>SMK Negeri 4 Tasikmalaya</h6>
-      <h6>Jl Depok Kel.Sukamenak Kec.Purbaratu</h6>
+      <h6>Jl.Depok, Kelurahan.Sukamenak, Kecamatan.Purbaratu, Kota.Tasikmalaya, Provinsi.Jawa Barat, 46196</h6>
     </div>
   </div>
 </template>
