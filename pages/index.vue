@@ -29,7 +29,7 @@
     </div>
       <div class="row my-5 d-flex justify-content-evenly ">
         <div class="col-lg-6 box">
-          <NuxtLink to="http://localhost:3000/Pengunjung">
+          <NuxtLink to="https://perpus-digital-rho.vercel.app/Pengunjung">
             <div class="card b2 rounded-5">
               <div class="card-body text">
                 <h1><span class="no">{{ jml_pengunjung}}</span></h1>
