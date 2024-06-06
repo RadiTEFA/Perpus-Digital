@@ -8,7 +8,7 @@
             v-model="keyword"
             type="search"
             class="form-control rounded-5"
-            placeholder="mau baca apa hari ini?"
+            placeholder="Mau baca apa hari ini?"
             />
           </form>
         </div>
