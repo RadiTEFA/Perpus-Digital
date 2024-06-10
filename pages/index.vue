@@ -29,7 +29,7 @@
     </div>
       <div class="row my-5 d-flex justify-content-evenly ">
         <div class="col-lg-6 box">
-          <NuxtLink to="https://perpus-digital-rho.vercel.app/Pengunjung">
+          <NuxtLink to="/Pengunjung">
             <div class="card b2 rounded-5">
               <div class="card-body text">
                 <h1><span class="no">{{ jml_pengunjung}}</span></h1>
@@ -39,7 +39,7 @@
           </NuxtLink>
         </div>
         <div class="col-lg-6 box">
-          <NuxtLink to="https://perpus-digital-rho.vercel.app/Buku">
+          <NuxtLink to="/Buku">
             <div class="card b3 rounded-5">
               <div class="card-body text">
                 <h1 class="no">{{ jml_buku}}</h1>
