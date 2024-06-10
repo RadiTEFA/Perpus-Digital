@@ -75,7 +75,7 @@ const keyword = ref("");
 }
 .card-body {
   width: 100%;
-  height: 20em;
+  height: 28em;
   padding: 0;
 }
 .cover {
