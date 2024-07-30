@@ -27,7 +27,7 @@
                           <td>{{ i+1 }}.</td>
                           <td>{{ visitor.nama }}</td>
                           <td>{{ visitor.keanggotaan.nama }}</td>
-                          <td>{{ visitor.tanggal }} {{ visitor.waktu }}</td>
+                          <td>{{ visitor.waktu }}</td>
                           <td>{{ visitor.tingkat }}</td>
                           <td>{{ visitor.jurusan }}</td>
                           <td>{{ visitor.kelas }}</td>
