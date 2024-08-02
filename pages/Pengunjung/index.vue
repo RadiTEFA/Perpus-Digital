@@ -23,7 +23,7 @@
                       </tr>
                   </thead>
                   <tbody>
-                      <tr v-for="(visitor,i) in visitor" :key="i">
+                      <tr v-for="(visitor,i) in visitors" :key="i">
                           <td>{{ i+1 }}.</td>
                           <td>{{ visitor.nama }}</td>
                           <td>{{ visitor.keanggotaan.nama }}</td>
