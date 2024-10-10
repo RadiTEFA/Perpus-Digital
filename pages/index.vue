@@ -6,7 +6,7 @@
           <div class="card bg-pengunjung rounded-5">
             <div class="card-body">
               <div class="Radi">
-                <h2>Pengunjung</h2>
+                <h2>Form Pengunjung</h2>
               </div>
             </div>
           </div>
