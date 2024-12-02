@@ -9,8 +9,8 @@
 
   <script>
     // Sambungkan ke Supabase
-    const supabaseUrl = 'https://your-project-url.supabase.co'; // Ganti dengan URL Supabase Anda
-    const supabaseKey = 'your-supabase-key'; // Ganti dengan API Key Anda
+    const supabaseUrl = 'https://mphyrckwcmayulgshugc.supabase.co'; // Ganti dengan URL Supabase Anda
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1waHlyY2t3Y21heXVsZ3NodWdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYyNTk1ODEsImV4cCI6MjAzMTgzNTU4MX0.R5FgpY0e7OTlafsZBQbGC3qqvxaZsYM8lmxxIT7MCG0'; // Ganti dengan API Key Anda
     const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
     // Ambil data dari Supabase dan buat chart
