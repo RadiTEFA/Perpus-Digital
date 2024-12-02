@@ -5,34 +5,42 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue';
+import Chart from 'chart.js/auto'
 
-const labels = ref([]);
-const pengunjung = ref([]);
-
-async function fetchData() {
-  const { data, error } = await supabase
-    .from('pengunjung') // Ganti dengan nama tabel Anda
-    .select('*');
-
-  if (error) {
-    console.error('Error fetching data:', error);
-    return;
-  }
-
-  // Map data ke format untuk Chart.js
-  labels.value = data.map(item => item.bulan);
-  pengunjung.value = data.map(item => item.jumlah_pengunjung);
-}
-onMounted(async () => {
-  await fetchData();
+const labels = [
+    'Januari',
+    'Februari',
+    'Maret',
+    'April',
+    'Mei',
+    'Juni',
+    'Juli',
+    'Agustus',
+    'September',
+    'Oktober',
+    'November',
+    'Desember'
+  ];
 
   const data = {
-    labels: labels.value,
+    labels: labels,
     datasets: [{
       label: 'Pengunjung',
-      data: pengunjung.value,
-      backgroundColor: 'rgb(0, 120, 255)',
+      data: [1, 5, 7, 4, 10, 6, 3, 2, 8, 9, 0, 0],
+      backgroundColor: [
+      'rgb(0, 120, 255)',
+      'rgb(0, 120, 255)',
+      'rgb(0, 120, 255)',
+      'rgb(0, 120, 255)',
+      'rgb(0, 120, 255)',
+      'rgb(0, 120, 255)',
+      'rgb(0, 120, 255)',
+      'rgb(0, 120, 255)',
+      'rgb(0, 120, 255)',
+      'rgb(0, 120, 255)',
+      'rgb(0, 120, 255)',
+      'rgb(0, 120, 255)'
+    ],
     }]
   };
 
@@ -42,8 +50,11 @@ onMounted(async () => {
     options: {}
   };
 
+
+onMounted(() => {
   const myChart = new Chart(
     document.getElementById('statistik'),
     config
   );
-});
+})
+</script>
