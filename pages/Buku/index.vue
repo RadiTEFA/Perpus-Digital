@@ -82,7 +82,6 @@ const keyword = ref("");
 }
 .cover {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   object-position: 0 30;
   aspect-ratio: 16/9;
