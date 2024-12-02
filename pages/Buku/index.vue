@@ -85,6 +85,7 @@ const keyword = ref("");
   height: 100%;
   object-fit: cover;
   object-position: 0 30;
+  aspect-ratio: 16/9;
 }
 .form-control {
   background-color: #D9D9D9;
