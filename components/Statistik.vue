@@ -1,3 +1,7 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="myChart"></canvas>
+
+
 import Chart from 'chart.js/auto';
 
 async function renderChart() {
