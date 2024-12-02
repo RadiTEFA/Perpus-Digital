@@ -1,60 +1,32 @@
-<template>
-    <div>
-        <canvas id="statistik"></canvas>
-    </div>
-</template>
+import Chart from 'chart.js/auto';
 
-<script setup>
-import Chart from 'chart.js/auto'
+async function renderChart() {
+  const data = await fetchPengunjung();
 
-const labels = [
-    'Januari',
-    'Februari',
-    'Maret',
-    'April',
-    'Mei',
-    'Juni',
-    'Juli',
-    'Agustus',
-    'September',
-    'Oktober',
-    'November',
-    'Desember'
-  ];
+  const labels = data.map(item => item.bulan);
+  const pengunjung = data.map(item => item.jumlah_pengunjung);
 
-  const data = {
-    labels: labels,
-    datasets: [{
-      label: 'Pengunjung',
-      data: [1, 5, 7, 4, 10, 6, 3, 2, 8, 9, 0, 0],
-      backgroundColor: [
-      'rgb(0, 120, 255)',
-      'rgb(0, 120, 255)',
-      'rgb(0, 120, 255)',
-      'rgb(0, 120, 255)',
-      'rgb(0, 120, 255)',
-      'rgb(0, 120, 255)',
-      'rgb(0, 120, 255)',
-      'rgb(0, 120, 255)',
-      'rgb(0, 120, 255)',
-      'rgb(0, 120, 255)',
-      'rgb(0, 120, 255)',
-      'rgb(0, 120, 255)'
-    ],
-    }]
-  };
-
-  const config = {
+  const ctx = document.getElementById('myChart').getContext('2d');
+  new Chart(ctx, {
     type: 'bar',
-    data: data,
-    options: {}
-  };
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Jumlah Pengunjung',
+        data: pengunjung,
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+}
 
-
-onMounted(() => {
-  const myChart = new Chart(
-    document.getElementById('statistik'),
-    config
-  );
-})
-</script>
+renderChart();
