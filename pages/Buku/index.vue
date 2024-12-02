@@ -67,6 +67,8 @@ const keyword = ref("");
 }
 .card {
   transition: all .2s ease-in-out;
+  width: 100%;
+  aspect-ratio: 16/9;
 }
 .btn{
   background-color: rgb(68, 80, 252);
