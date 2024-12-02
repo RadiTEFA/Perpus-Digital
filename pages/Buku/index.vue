@@ -78,6 +78,7 @@ const keyword = ref("");
 .card-body {
   width: 100%;
   height: 28em;
+  aspect-ratio: 16/9;
   padding : 0;
 }
 .cover {
