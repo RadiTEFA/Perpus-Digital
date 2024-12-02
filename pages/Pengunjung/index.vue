@@ -46,11 +46,25 @@
 </template>
 <script setup>
 
+import { createClient } from '@supabase/supabase-js';
+
 const supabase = useSupabaseClient()
 const keyword = ref('')
 const visitors = ref([])
 const TotalPengunjung = ref(0);
 const saya = ref(visitors)
+
+const supabaseUrl = 'https://mphyrckwcmayulgshugc.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1waHlyY2t3Y21heXVsZ3NodWdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYyNTk1ODEsImV4cCI6MjAzMTgzNTU4MX0.R5FgpY0e7OTlafsZBQbGC3qqvxaZsYM8lmxxIT7MCG0';
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+async function fetchPengunjung() {
+  const { data, error } = await supabase
+    .from('pengunjung')
+    .select('*');
+  if (error) console.error(error);
+  return data;
+}
 
 const getPengunjung = async () => {
   const { data, error } = await supabase.from('pengunjung').select(`*, keanggotaan(*), keperluan(*)`)
