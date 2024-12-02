@@ -2,7 +2,7 @@
 <canvas id="myChart"></canvas>
 
 
-import Chart from 'chart.js/auto';
+import Chart from 'Statistik.js/auto';
 
 async function renderChart() {
   const data = await fetchPengunjung();
