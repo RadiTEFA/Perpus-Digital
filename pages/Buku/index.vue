@@ -75,7 +75,7 @@ const keyword = ref("");
 }
 .card-body {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 3/2;
 }
 .cover {
   width: 100%;
