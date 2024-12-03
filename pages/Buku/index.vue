@@ -68,7 +68,6 @@ const keyword = ref("");
 .card {
   transition: all .2s ease-in-out;
   width: 100%;
-  aspect-ratio: 16/9;
 }
 .btn{
   background-color: rgb(68, 80, 252);
@@ -84,7 +83,6 @@ const keyword = ref("");
   width: 100%;
   object-fit: cover;
   object-position: 0 30;
-  aspect-ratio: 16/9;
 }
 .form-control {
   background-color: #D9D9D9;
